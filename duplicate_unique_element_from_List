@@ -1,0 +1,22 @@
+# Find the duplicate and unique elements from the given list
+
+data = [1,2,3,45,6,3,3,45,67,66,678,456,2,1]
+unique =[]
+duplicate = []
+
+for i in data:
+    count=0
+    j=i
+    for x in data:
+
+        if x == j:
+            count += 1
+            if count > 1 and x not in duplicate:
+                duplicate.append(i)
+                break
+    if count <=1:
+        unique.append(i)
+
+
+print("Unique : ",unique)
+print("Duplicate : ",duplicate)
